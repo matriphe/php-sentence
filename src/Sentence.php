@@ -380,5 +380,17 @@ class Sentence
     {
         return count($this->split($text));
     }
+    
+    /**
+     * Add terminals separator.
+     * @param array $terminals
+     * @return self
+     */
+    public function addTerminals(array $terminals)
+    {
+        $this->terminals = array_merge($this->terminals, $terminals);
+        
+        return $this;
+    }
 
 }
